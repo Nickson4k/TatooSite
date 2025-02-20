@@ -53,7 +53,7 @@ header {
     z-index: 1000;
 }
 .logo{
-    width: 8%;
+    width: 70px;
     border-radius: 7px;
     box-shadow: 0 0 50px rgb(255, 151, 151); 
 }
