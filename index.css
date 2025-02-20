@@ -207,17 +207,15 @@ h2::after {
 .hero-video {
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.2);
     width: 100%; /* Додано для коректного масштабування */
 }
 
 @media (max-width: 768px) {
     .hero {
-        padding: 15px;
+        padding: 10px;
     }
     .hero-video {
         border-radius: 12px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.15);
         max-width: 100%;
         margin: 0 auto;
         width: calc(100% - 30px); /* Фікс для закруглень по краях */
@@ -227,13 +225,9 @@ h2::after {
 @media (max-width: 480px) {
     .hero-video {
         border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         width: calc(100% - 20px); /* Забезпечує місце для закруглень */
     }
-    .hero-button {
-        font-size: 14px;
-        padding: 8px 16px;
-    }
+ 
 }
 
 .hero {
@@ -241,7 +235,7 @@ h2::after {
     overflow: hidden;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px; /* Додано відступи для збереження закруглень */
+    padding: 0 1px; /* Додано відступи для збереження закруглень */
 }
 .tg{
     width: 30px;
