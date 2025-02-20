@@ -27,8 +27,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Динамічне завантаження галереї
     const galleryData = [
-        {img: 'tattoo3.jpg', alt: 'Геометричний дизайн', desc: 'Сучасний трайбл орнамент'},
-        {img: 'tattoo4.jpg', alt: 'Акварельна татуіровка', desc: 'Ніжний квітковий мотив'}
+        {img: 'tattoo3.jpg', alt: 'Геометричний дизайн', desc: 'Nowoczesny ornament plemienny'},
+        {img: 'tattoo4.jpg', alt: 'Акварельна татуіровка', desc: 'Delikatny motyw kwiatowy'}
     ];
 
     function generateGalleryItems(items) {
