@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+
 :root {
     --bg-color: linear-gradient(45deg, #0a0a0a, #1a1a1a);
     --text-color: #cccccc;
@@ -125,25 +126,25 @@ main {
 .pro{
     width: 25%;
     height: auto;
-    border-radius: 20px;
-    padding: 5px;
+    border-radius: 30px;
+    padding: 15px;
     object-fit: cover;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 @media (max-width: 768px) {
     .pro {
-        width: 45%;
+        width: 30%;
         border-radius: 20px;
-        padding: 10px;
+        padding: 2px;
     }
 }
 
 @media (max-width: 580px) {
     .pro {
-        width: 45%;
+        width: 35%;
         border-radius: 20px;
-        padding: 5px;
+        padding: 2px;
     }
 }
    
@@ -428,7 +429,7 @@ body.portfolio-page::before {
     background: url('fon.jpg') center/cover no-repeat;
     z-index: -1;
     filter: brightness(0.8);
-    transition: filter 0.5s ease; /* Додано перехід для плавної зміни яскравості */
+    transition: filter 0.5s ease; 
 }
 
 body.portfolio-page.light-theme::before {
@@ -474,4 +475,11 @@ body.index-page::before {
 
 body.index-page.light-theme::before {
     filter: brightness(1.4);
+}
+
+.process-gallery {
+    display: flex; /* Додаємо flexbox для горизонтального розміщення */
+    justify-content: space-between; /* Вирівнюємо відео з простором між ними */
+    flex-wrap: nowrap; /* Забороняємо перенесення на новий ряд */
+    justify-content: center;
 }
