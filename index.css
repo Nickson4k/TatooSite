@@ -20,7 +20,32 @@ body {
     transition: all 0.3s ease;
     
 }
-
+h1, h2, h3 {
+    font-family: 'Didot', serif;
+}
+.block{
+    width: 100%;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 25px;
+    padding: 10px;
+    margin: 15px auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid rgb(107, 107, 107);
+}
+.block-2 {
+    display: inline-block;
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 14px;
+    padding: 5px 10px;
+   
+    border: 1px solid rgb(123, 123, 123);
+    white-space: nowrap;
+    
+}
 /* Додано !important для забезпечення пріоритету стилю */
 /* Видалено зайві пробіли та коментарі */
 /* Використано правильний синтаксис для вказівника з фолбеком */
@@ -118,10 +143,11 @@ nav ul li a:hover::after {
 }
 
 main {
-    padding: 50px 30px;
+    padding:  20px;
     max-width: 1400px;
     margin: 0 auto;
 }
+
 .pro{
     width: 25%;
     height: auto;
@@ -310,7 +336,7 @@ h2::after {
 }
 
 .hero-video {
-    border-radius: 20px;
+    border-radius: 25px;
     overflow: hidden;
     width: 100%; /* Додано для коректного масштабування */
 }
@@ -324,20 +350,20 @@ video::-webkit-media-controls {
         padding: 10px;
     }
     .hero-video {
-        border-radius: 12px;
+        border-radius: 20px;
         max-width: 100%;
         margin: 0 auto;
         width: calc(100% - 30px); /* Фікс для закруглень по краях */
     }
 }
-/* Визначення класу з кастомним курсором */
+
 
 
 
 
 @media (max-width: 480px) {
     .hero-video {
-        border-radius: 8px;
+        border-radius: 15px;
         width: calc(100% - 20px); /* Забезпечує місце для закруглень */
     }
  
@@ -348,14 +374,18 @@ video::-webkit-media-controls {
     overflow: hidden;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1px; /* Додано відступи для збереження закруглень */
+    padding: 0 1px; 
+      display: flex;
+   
+    align-items: center; 
+    display: flex;
+    justify-content: center;
+    
 }
 .tg{
     width: 30px;
 }
-#about{
-    margin-left: 30px;
-}
+
 #portfolio{
     margin-left: 30px;
 }
