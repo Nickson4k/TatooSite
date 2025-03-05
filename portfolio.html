@@ -120,9 +120,27 @@
 
     <footer>
         <p>&copy; 2024 Studio Tatuażu "Czarna Róża". Wszelkie prawa zastrzeżone.</p>
-        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="back-to-top">Na górę</button>
+        <button id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="back-to-top">Na górę</button>
     </footer>
     
     <script src="index.js"></script>
+    <script>
+        const backToTopButton = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                backToTopButton.classList.add('show'); // Додати клас для показу
+            } else {
+                backToTopButton.classList.remove('show'); // Видалити клас для приховування
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            backToTopButton.classList.add('clicked'); // Додати клас при натисканні
+            setTimeout(() => {
+                backToTopButton.classList.remove('clicked'); // Видалити клас через 300 мс
+            }, 300);
+        });
+    </script>
 </body>
 </html>
