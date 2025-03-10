@@ -3,7 +3,7 @@
 :root {
     --bg-color: linear-gradient(45deg, #1a1a1a, #2d2929);
     --text-color: #e2e2e2;
-    --header-bg: linear-gradient(160deg, #000000 30%, #250303 100%);
+    --header-bg: linear-gradient(160deg, #000000 30%, #4c0c0c 100%);
     --header-text: #ff1e1e;
     --accent-color: #c10303;
     --button-bg: linear-gradient(45deg, #1a1a1a, #2a0000);
@@ -23,15 +23,17 @@ body {
 h1, h2, h3 {
     font-family: 'Didot', serif;
 }
-.block{
-    width: 100%;
+.block {
+    width: 90%;
+    max-width: 1200px;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 25px;
-    padding: 10px;
+    padding: 20px;
     margin: 15px auto;
     display: flex;
     justify-content: center;
+  
     flex-direction: column;
     border: 1px solid rgb(107, 107, 107);
 }
@@ -53,7 +55,7 @@ h1, h2, h3 {
 .light-theme {
     --bg-color: linear-gradient(45deg, #f5f5f5, #ffffff);
     --text-color: #1a1a1a;
-    --header-bg: linear-gradient(160deg, #ffffff 30%, #ffe6e6 100%);
+    --header-bg: linear-gradient(160deg, #ffffff 30%, #ffc6c6 100%);
     --header-text: #bc0000;
     --accent-color: #ff6666;
     --button-bg: linear-gradient(45deg, #ffffff, #ffe6e6);
@@ -89,12 +91,11 @@ header {
     position: relative;
     z-index: 1000;
 }
-.logo{
+.logo {
     width: 70px;
-    border-radius: 7px;
-    box-shadow: 0 0 50px rgb(255, 151, 151); 
     position: relative;
     top: 15px;
+    filter: drop-shadow(1px 1px 9px #ff9595);
 }
 .wy{
    
@@ -463,10 +464,17 @@ body.portfolio-page::before {
     transition: filter 0.5s ease; 
 }
 
+@media (max-width: 500px) {
+    body.portfolio-page::before {
+        background-image: url('fon-m.jpg');
+    }
+}
 body.portfolio-page.light-theme::before {
     filter: brightness(1.1);
 }
 .back-to-top {
+    width: 46px;
+    height: 46px;
     position: fixed;
     right: 10px;
     bottom: 25px;
@@ -474,11 +482,10 @@ body.portfolio-page.light-theme::before {
     background-color: rgba(255, 255, 255, 0);
     color: rgb(227, 27, 27);
     border: 2px solid rgba(251, 19, 19, 0.56);
-    border-radius: 15px;
+    border-radius: 25px;
     cursor: pointer;
     backdrop-filter: blur(1px);
     transition: opacity 0.3s ease, transform 0.3s ease;
-    font-size: 14px;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -505,7 +512,13 @@ body.index-page::before {
     background: url('fon3.jpg') center/cover no-repeat;
     z-index: -1;
     filter: brightness(0.2);
-    transition: filter 0.5s ease; /* Додано перехід для плавної зміни яскравості */
+    transition: filter 0.5s ease;
+}
+
+@media (max-width: 500px) {
+    body.index-page::before {
+        background-image: url('fon-m3.jpg');
+    }
 }
 
 body.index-page.light-theme::before {
@@ -520,30 +533,47 @@ body.index-page.light-theme::before {
 }
 
 .back-to-top.clicked {
-    transform: scale(0.7); /* Зменшити масштаб при натисканні */
-    transition: transform 0.3s ease; /* Додати перехід для плавності */
+    transform: scale(0.7);
+    transition: transform 0.3s ease;
+}
+
+.back-to-top:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
 .social-links a {
     width: 32px;
     height: 32px;
-    display: inline-block; /* Додано для правильного позиціонування */
-    transition: transform 0.3s ease; /* Додано перехід для плавності */
+    display: inline-block;
+    transition: all 0.3s ease;
     border: 1px solid rgb(146, 146, 146);
     border-radius: 5px;
 }
 
+.social-links a:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
 .social-links a:active {
-    transform: scale(0.8); /* Зменшити масштаб при натисканні */
+    transform: scale(0.8);
 }
 
 .location-icon {
-    width: 20px; /* Встановіть ширину іконки */
-    height: auto; /* Автоматична висота для збереження пропорцій */
-    margin-right: 2px; /* Відступ праворуч для відстані між іконкою та текстом */
-    position: relative; /* Додано для можливості зсуву */
-    top: -4px; /* Зсув іконки трохи вище */
-    vertical-align: middle; /* Вирівнювання по вертикалі з текстом */
+    width: 20px;
+    height: auto;
+    margin-right: 2px;
+    position: relative;
+    top: -4px;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+.location-icon:hover {
+    transform: scale(1.2);
 }
 
 .hero-button {
