@@ -5,9 +5,20 @@ document.addEventListener('DOMContentLoaded', function() {
     themeToggle.className = 'theme-toggle';
     document.body.prepend(themeToggle);
 
+    // Функція для зміни логотипу в залежності від теми
+    function updateLogo() {
+        const logo = document.querySelector('.logo');
+        if (document.body.classList.contains('light-theme')) {
+            logo.src = 'img/b-logo.png';
+        } else {
+            logo.src = 'img/w-logo.png';
+        }
+    }
+
     function toggleTheme() {
         document.body.classList.toggle('light-theme');
         localStorage.setItem('theme', document.body.classList.contains('light-theme') ? 'light' : 'dark');
+        updateLogo();
     }
     
     themeToggle.addEventListener('click', toggleTheme);
@@ -17,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (savedTheme === 'light') {
         document.body.classList.add('light-theme');
     }
+    updateLogo(); // Оновити логотип при завантаженні сторінки
 
     // Плавний скролінг для навігації
     const links = document.querySelectorAll('a[href^="#"]');
