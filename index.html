@@ -8,7 +8,7 @@
 </head>
 <body class="index-page">
     <header>
-        <img src="logo.jpg" alt="Logo studia" class="logo">
+        <img src="img/b-logo.png" alt="Logo studia" class="logo">
         <h1>Studio Tatuażu "Czarna Róża"</h1>
         <nav>
             <ul>
@@ -92,8 +92,35 @@
 
     <footer>
         <p>&copy; 2024 Studio Tatuażu "Czarna Róża". Wszelkie prawa zastrzeżone.</p>
-    </footer>
+        <button id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="back-to-top"><img src="img/arrow-el.png" alt="skandynawski" style="width: 30px;
+            height: 30px; position: relative; right: 2px; bottom: 1px;"></button>
+</footer>
+
+<script src="index.js"></script>
+<script>
+   const backToTopButton = document.getElementById('backToTop');
+   const footer = document.querySelector('footer');
+
+   window.addEventListener('scroll', () => {
+       const footerPosition = footer.getBoundingClientRect().top;
+       const windowHeight = window.innerHeight;
+
+       // Перевіряємо, чи футер з'явився у вікні перегляду
+       if (footerPosition <= windowHeight) {
+           backToTopButton.classList.add('show'); // Показуємо кнопку
+       } else {
+           backToTopButton.classList.remove('show'); // Ховаємо кнопку
+       }
+   });
+
+   backToTopButton.addEventListener('click', () => {
+       backToTopButton.classList.add('clicked'); // Додаємо анімацію при кліку
+       setTimeout(() => {
+           backToTopButton.classList.remove('clicked'); // Видаляємо анімацію
+       }, 300);
+   });
+</script>
     
-    <script src="index.js"></script>
+    
 </body>
 </html>
