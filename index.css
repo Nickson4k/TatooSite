@@ -151,20 +151,21 @@ main {
     margin: 0 auto;
 }
 
-.pro{
+.pro {
     width: 25%;
     height: auto;
     border-radius: 30px;
-    padding: 15px;
+    margin: 15px; /* Замінюємо padding на margin */
     object-fit: cover;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    overflow: hidden; /* Додаємо, щоб приховати можливі елементи за межами */
 }
 
 @media (max-width: 768px) {
     .pro {
         width: 30%;
         border-radius: 20px;
-        padding: 2px;
+        margin: 2px; /* Замінюємо padding на margin */
     }
 }
 
@@ -172,10 +173,9 @@ main {
     .pro {
         width: 35%;
         border-radius: 20px;
-        padding: 2px;
+        margin: 2px; /* Замінюємо padding на margin */
     }
 }
-   
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -189,7 +189,7 @@ main {
     overflow: hidden;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 30px rgba(18, 18, 18, 0.779);
 }
 
 .gallery-item img {
@@ -476,7 +476,7 @@ body.portfolio-page.light-theme::before {
     width: 46px;
     height: 46px;
     position: fixed;
-    right: 10px;
+    right: 18px;
     bottom: 25px;
     padding: 8px 9px;
     background-color: rgba(255, 255, 255, 0);
@@ -526,15 +526,13 @@ body.index-page.light-theme::before {
 }
 
 .process-gallery {
-    display: flex; /* Додаємо flexbox для горизонтального розміщення */
-    justify-content: space-between; /* Вирівнюємо відео з простором між ними */
-    flex-wrap: nowrap; /* Забороняємо перенесення на новий ряд */
-    justify-content: center;
+    display: flex; /* Flexbox для горизонтального розміщення */
+    justify-content: center; /* Вирівнюємо по центру */
+    flex-wrap: wrap; /* Дозволяємо перенос на новий рядок */
 }
-
 .back-to-top.clicked {
     transform: scale(0.7);
-    transition: transform 0.3s ease;
+    transition: transform 0.9s ease;
 }
 
 .back-to-top:hover {
