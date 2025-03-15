@@ -526,9 +526,10 @@ body.index-page.light-theme::before {
 }
 
 .process-gallery {
-    display: flex; /* Flexbox для горизонтального розміщення */
-    justify-content: center; /* Вирівнюємо по центру */
-    flex-wrap: wrap; /* Дозволяємо перенос на новий рядок */
+    display: flex; /* Додаємо flexbox для горизонтального розміщення */
+    justify-content: space-between; /* Вирівнюємо відео з простором між ними */
+    flex-wrap: nowrap; /* Забороняємо перенесення на новий ряд */
+    justify-content: center;
 }
 .back-to-top.clicked {
     transform: scale(0.7);
