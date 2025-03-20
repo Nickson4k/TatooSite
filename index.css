@@ -215,7 +215,7 @@ video::-webkit-media-controls {
 .gallery-item:hover {
     transform: translateY(-8px);
     box-shadow: 0 12px 40px rgba(0,0,0,0.15);
-    z-index: 1; /* Додано для правильного відображення поверх інших елементів */
+   
 }
 
 .gallery-item p {
