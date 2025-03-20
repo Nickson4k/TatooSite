@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+
 :root {
     --bg-color: linear-gradient(45deg, #1a1a1a, #2d2929);
     --text-color: #e2e2e2;
@@ -190,6 +191,7 @@ video::-webkit-media-controls {
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
     padding: 30px 0;
+    width: 100%; /* Додано для уникнення можливих проблем з шириною */
 }
 
 .gallery-item {
@@ -199,6 +201,7 @@ video::-webkit-media-controls {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     box-shadow: 0 8px 30px rgba(18, 18, 18, 0.779);
+    min-height: 100px; /* Додано мінімальну висоту для уникнення згортання */
 }
 
 .gallery-item img {
@@ -206,11 +209,13 @@ video::-webkit-media-controls {
     height: 400px;
     object-fit: cover;
     transition: transform 0.3s ease;
+    display: block; /* Виправлено можливу проблему з відображенням */
 }
 
 .gallery-item:hover {
     transform: translateY(-8px);
     box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+    z-index: 1; /* Додано для правильного відображення поверх інших елементів */
 }
 
 .gallery-item p {
@@ -220,6 +225,39 @@ video::-webkit-media-controls {
     text-align: center;
     background: rgba(255,255,255,0.9);
     color: #333;
+    position: relative; /* Виправлено можливу проблему з позиціонуванням */
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Змінено мінімальну ширину для кращої адаптації */
+        gap: 20px; /* Зменшено проміжок для мобільних пристроїв */
+    }
+
+    .gallery-item {
+        height: auto;
+    }
+
+    .gallery-item img {
+        height: 250px; /* Змінено висоту для кращого співвідношення */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(133px, 1fr)); /* Змінено мінімальну ширину */
+        gap: 15px; /* Зменшено проміжок для маленьких екранів */
+        padding: 15px 0; /* Зменшено відступи */
+    }
+
+    .gallery-item img {
+        height: 150px; /* Змінено висоту для кращого відображення */
+    }
+
+    .gallery-item p {
+        padding: 10px; /* Зменшено відступи для тексту */
+        font-size: 0.85em; /* Зменшено розмір шрифту */
+    }
 }
 
 /* Загальний стиль для всіх кнопок */
@@ -368,10 +406,6 @@ video::-webkit-media-controls {
         width: calc(100% - 30px); /* Фікс для закруглень по краях */
     }
 }
-
-
-
-
 
 @media (max-width: 480px) {
     .hero-video {
@@ -661,3 +695,4 @@ body.index-page.light-theme::before {
     color: #ffffff;
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
+
