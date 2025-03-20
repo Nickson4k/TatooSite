@@ -9,9 +9,9 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateLogo() {
         const logo = document.querySelector('.logo');
         if (document.body.classList.contains('light-theme')) {
-            logo.src = 'img/b-logo.png';
+            logo.src = 'img/b-logo.webp';
         } else {
-            logo.src = 'img/w-logo.png';
+            logo.src = 'img/w-logo.webp';
         }
     }
 
