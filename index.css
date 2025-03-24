@@ -1,14 +1,13 @@
 @charset "UTF-8";
 
-
 :root {
     --bg-color: linear-gradient(45deg, #1a1a1a, #2d2929);
     --text-color: #e2e2e2;
     --header-bg: linear-gradient(160deg, #000000 30%, #4c0c0c 100%);
-    --header-text: #ff1e1e;
+    --header-text: #ff0e0e;
     --accent-color: #c10303;
     --button-bg: linear-gradient(45deg, #1a1a1a, #2a0000);
-    --button-text: #ff4d4d;
+    --button-text: #fa4f4f;
     --card-bg: #272727;
 }
 
@@ -21,8 +20,51 @@ body {
     transition: all 0.3s ease;
     
 }
-h1, h2, h3 {
+h2, h3 {
     font-family: 'Didot', serif;
+}
+h1 {
+    font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-family: "Jaini", system-ui;
+  font-style: normal;
+  color: #000000;
+   
+    position: relative;
+    
+
+}
+
+
+h4 {
+    font-family: 'Courier New', monospace;
+    color: #ffffff;
+    position: relative;
+    right: 19px;
+    top: 30px;
+    text-decoration: underline;
+    text-shadow: 
+        0 0 5px #fff,
+        0 0 10px #ffffff,
+        0 0 20px #ffffff,
+        0 0 40px #ffffff,
+        0 0 80px #ffffff;
+   
+}
+
+
+.fn{
+    background: url('ffon.webp') center/cover no-repeat;
+    border-top: 1px solid white;
+}
+.knupka {
+    color: #e6e6e6;
+    
+}
+.hf{
+    background: url('hfon.webp') center/cover no-repeat;
+    border-bottom: 1px solid rgb(135, 135, 135);
 }
 .block {
     width: 90%;
@@ -84,6 +126,7 @@ button, a {
 }
 
 header {
+    
     background: var(--header-bg);
     color: var(--header-text);
     padding: 1px 0;
@@ -251,7 +294,7 @@ video::-webkit-media-controls {
     }
 
     .gallery-item img {
-        height: 150px; /* Змінено висоту для кращого відображення */
+        height: 180px; /* Змінено висоту для кращого відображення */
     }
 
     .gallery-item p {
@@ -311,8 +354,8 @@ input[type="submit"]:active {
 #appointment-form button {
     width: 100%;
     margin-top: 15px;
-    background-color: #8b0000; /* темно-червоний колір, що відповідає темі "Чорна Троянда" */
-    border-color: #8b0000;
+    background-color: #750101; /* темно-червоний колір, що відповідає темі "Чорна Троянда" */
+    border-color: #6e0000;
 }
 
 #appointment-form button:hover {
@@ -501,7 +544,7 @@ body.portfolio-page::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('fon.webp') center/cover no-repeat;
+    background: url('ff.png') center/cover no-repeat;
     z-index: -1;
     filter: brightness(0.3);
     transition: filter 0.5s ease; 
@@ -509,7 +552,7 @@ body.portfolio-page::before {
 
 @media (max-width: 500px) {
     body.portfolio-page::before {
-        background-image: url('fon-m.webp');
+        background-image: url('ff.png');
     }
 }
 body.portfolio-page.light-theme::before {
