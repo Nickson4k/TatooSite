@@ -5,20 +5,9 @@ document.addEventListener('DOMContentLoaded', function() {
     themeToggle.className = 'theme-toggle';
     document.body.prepend(themeToggle);
 
-    // Функція для зміни логотипу в залежності від теми
-    function updateLogo() {
-        const logo = document.querySelector('.logo');
-        if (document.body.classList.contains('light-theme')) {
-            logo.src = 'img/b-logo.webp';
-        } else {
-            logo.src = 'img/w-logo.webp';
-        }
-    }
-
     function toggleTheme() {
         document.body.classList.toggle('light-theme');
         localStorage.setItem('theme', document.body.classList.contains('light-theme') ? 'light' : 'dark');
-        updateLogo();
     }
     
     themeToggle.addEventListener('click', toggleTheme);
@@ -28,7 +17,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (savedTheme === 'light') {
         document.body.classList.add('light-theme');
     }
-    updateLogo(); // Оновити логотип при завантаженні сторінки
 
     // Плавний скролінг для навігації
     const links = document.querySelectorAll('a[href^="#"]');
@@ -47,34 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Перевіряємо, чи знаходимося на головній сторінці
-    const appointmentForm = document.getElementById('appointment-form');
-    if (appointmentForm) {
-        // Валідація форми запису (тільки на головній сторінці)
-        appointmentForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const name = document.getElementById('name').value.trim();
-            const phone = document.getElementById('phone').value.trim();
-            const date = document.getElementById('date').value;
-            
-            // Валідація телефону
-            const phonePattern = /^\+38\(\d{3}\) \d{3}-\d{2}-\d{2}$/;
-            if (!phonePattern.test(phone)) {
-                alert('Будь ласка, введіть коректний номер телефону у форматі +38(099) 123-45-67');
-                return;
-            }
-
-            if (name === '' || date === '') {
-                alert('Будь ласка, заповніть всі обов\'язкові поля');
-                return;
-            }
-
-            // Відправка форми
-            this.reset();
-            alert('Ваша заявка успішно відправлена!');
-        });
-    }
+  
 
     // Перевіряємо, чи є галерея на сторінці
     const gallery = document.querySelector('.gallery');
