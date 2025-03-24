@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+
 :root {
     --bg-color: linear-gradient(45deg, #1a1a1a, #2d2929);
     --text-color: #e2e2e2;
@@ -92,6 +93,11 @@ h4 {
     border: 1px solid rgb(107, 107, 107);
 }
 .block-2 {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-family: "Jaini", system-ui;
+    font-style: normal;
     display: inline-block;
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(10px);
