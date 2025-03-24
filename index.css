@@ -49,12 +49,10 @@ h4 {
     right: 40px;
     top: 30px;
     text-decoration: underline;
-    text-shadow: 
-        0 0 5px #fff,
-        0 0 100px #ffffff,
+     text-shadow: 
+        0 0 10px #ffffff,
         0 0 20px #ffffff,
-        0 0 40px #ffffff,
-        0 0 80px #ffffff;
+        0 0 40px #ffffff;
    
 }
 
