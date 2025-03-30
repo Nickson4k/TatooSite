@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-
 :root {
     --bg-color: linear-gradient(45deg, #1a1a1a, #2d2929);
     --text-color: #e2e2e2;
@@ -30,37 +29,19 @@ h1 {
   font-style: normal;
   font-family: "Jaini", system-ui;
   font-style: normal;
-
-   
     position: relative;
     
 
 }
 
 
-h4 {
-    font-family: "Dancing Script", cursive;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-family: "Jaini", system-ui;
-    font-style: normal;
-    color: #ffffff;
-    position: relative;
-    right: 40px;
-    top: 30px;
-    text-decoration: underline;
-     text-shadow: 
-        0 0 10px #ffffff,
-        0 0 20px #ffffff,
-        0 0 40px #ffffff;
-   
-}
 
 
 .fn{
     background: url('ffon.webp') center/cover no-repeat;
     border-top: 1px solid white;
 }
+
 .knupka {
     color: #e6e6e6;
     font-family: "Dancing Script", cursive;
@@ -612,7 +593,7 @@ body.index-page::before {
     height: 100%;
     background: url('fon3.webp') center/cover no-repeat;
     z-index: -1;
-    filter: brightness(0.2);
+    filter: brightness(0.3);
     transition: filter 0.5s ease;
 }
 
@@ -623,7 +604,7 @@ body.index-page::before {
 }
 
 body.index-page.light-theme::before {
-    filter: brightness(1.4);
+    filter: brightness(0.9);
 }
 
 .process-gallery {
