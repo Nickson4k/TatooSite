@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+
 :root {
     --bg-color: linear-gradient(45deg, #1a1a1a, #2d2929);
     --text-color: #e2e2e2;
@@ -38,8 +39,9 @@ h1 {
 
 
 .fn{
+    height: 90px;
     background: url('ffon.webp') center/cover no-repeat;
-    border-top: 1px solid white;
+    border-top: 1px solid rgb(45, 45, 45);
 }
 
 .knupka {
@@ -82,7 +84,7 @@ h1 {
     -webkit-backdrop-filter: blur(10px);
     border-radius: 14px;
     padding: 5px 10px;
-    background-color: #ffffff1b;
+    background-color: #ffffff1e;
     border: 1px solid rgb(157, 157, 157);
     white-space: nowrap;
     
@@ -241,6 +243,8 @@ video::-webkit-media-controls {
     position: relative;
     box-shadow: 0 8px 30px rgba(18, 18, 18, 0.779);
     min-height: 100px; /* Додано мінімальну висоту для уникнення згортання */
+    border: 2px solid rgb(255, 255, 255);
+  
 }
 
 .gallery-item img {
@@ -735,3 +739,22 @@ body.index-page.light-theme::before {
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
+.footer-social {
+   
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    margin-right: 100px;
+}
+
+.footer-social-link {
+
+    color: #f8f8f8;
+    font-size: 1.25rem;
+    transition: color var(--transition-medium) ease;
+}
+
+.footer-social-link:hover {
+    color: var(--primary-color);
+    transition: color 0.5s ease; /* Додано для плавності */
+}
